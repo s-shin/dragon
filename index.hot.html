@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dragon</title>
+    <script>
+      {
+        const script = document.createElement('script');
+        script.src = `http://localhost:${process.env.PORT || 8080}/dist/style.js`;
+        document.head.appendChild(script);
+      }
+    </script>
+  </head>
+  <body>
+    <main></main>
+    <script>
+      {
+        const script = document.createElement('script');
+        script.src = `http://localhost:${process.env.PORT || 8080}/dist/app.js`;
+        document.body.appendChild(script);
+      }
+    </script>
+  </body>
+</html>

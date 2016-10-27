@@ -1,0 +1,54 @@
+{
+  "name": "dragon",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development HOT=1 electron -r babel-register -r babel-polyfill ./main",
+    "dev-server": "cross-env NODE_ENV=development HOT=1 webpack-dev-server --inline --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-shin/dragon.git"
+  },
+  "keywords": [],
+  "author": "Shintaro Seki <s2pch.luck@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s-shin/dragon/issues"
+  },
+  "homepage": "https://github.com/s-shin/dragon#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "cross-env": "^3.1.3",
+    "css-loader": "^0.25.0",
+    "devtron": "^1.4.0",
+    "electron-load-devtool": "^0.3.0",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "node-sass": "^3.10.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "vue-loader": "^9.7.0",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^2.1.0-beta.9"
+  },
+  "dependencies": {
+    "electron": "^1.4.4",
+    "electron-devtools-installer": "^2.0.1",
+    "vue": "^2.0.3",
+    "vue-router": "^2.0.1",
+    "vuex": "^2.0.0",
+    "vuex-router-sync": "^3.0.0"
+  }
+}
