@@ -1,2 +1,10 @@
 ---
 extends: airbnb
+plugins: [html]
+root: true
+env:
+  browser: true
+rules:
+  object-property-newline: off
+  func-names: off
+  no-continue: off

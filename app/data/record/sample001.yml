@@ -1,0 +1,154 @@
+---
+meta:
+  title: 第66回NHK杯2回戦第1局
+  startedAt: 2016-08-07T10:30:00+09:00
+  players:
+    black:
+      name:
+        last: 阿久津
+        first: 主税
+      rank: { unit: dan, value: 8 }
+    white:
+      name:
+        last: 羽生
+        first: 善治
+      rank: { unit: dan, value: 9 }
+      titles: [oi, oza, kisei]
+events:
+  - { type: move, side: black, type: move, from: { x: 7, y: 7 }, to: { x: 7, y: 6 }, piece: FU }
+  - { type: move, side: white, from: { x: 8, y: 3 }, to: { x: 8, y: 4 }, piece: FU }
+  - { type: move, side: black, from: { x: 7, y: 9 }, to: { x: 6, y: 8 }, piece: GI }
+  - { type: move, side: white, from: { x: 3, y: 3 }, to: { x: 3, y: 4 }, piece: FU }
+  - { type: move, side: black, from: { x: 6, y: 8 }, to: { x: 7, y: 7 }, piece: GI }
+  - { type: move, side: white, from: { x: 7, y: 1 }, to: { x: 6, y: 2 }, piece: GI }
+  - { type: move, side: black, from: { x: 5, y: 7 }, to: { x: 5, y: 6 }, piece: FU }
+  - { type: move, side: white, from: { x: 5, y: 3 }, to: { x: 5, y: 4 }, piece: FU }
+  - { type: move, side: black, from: { x: 3, y: 9 }, to: { x: 4, y: 8 }, piece: GI }
+  - { type: move, side: white, from: { x: 3, y: 1 }, to: { x: 4, y: 2 }, piece: GI }
+  - { type: move, side: black, from: { x: 4, y: 9 }, to: { x: 5, y: 8 }, piece: KI }
+  - { type: move, side: white, from: { x: 4, y: 1 }, to: { x: 3, y: 2 }, piece: KI }
+  - { type: move, side: black, from: { x: 6, y: 7 }, to: { x: 6, y: 6 }, piece: FU }
+  - { type: move, side: white, from: { x: 5, y: 1 }, to: { x: 4, y: 1 }, piece: OU }
+  - { type: move, side: black, from: { x: 5, y: 8 }, to: { x: 6, y: 7 }, piece: KI }
+  - { type: move, side: white, from: { x: 7, y: 3 }, to: { x: 7, y: 4 }, piece: FU }
+  - { type: move, side: black, from: { x: 2, y: 7 }, to: { x: 2, y: 6 }, piece: FU }
+  - { type: move, side: white, from: { x: 6, y: 1 }, to: { x: 5, y: 2 }, piece: KI }
+  - { type: move, side: black, from: { x: 8, y: 8 }, to: { x: 7, y: 9 }, piece: KA }
+  - { type: move, side: white, from: { x: 4, y: 2 }, to: { x: 3, y: 3 }, piece: GI }
+  - { type: move, side: black, from: { x: 3, y: 7 }, to: { x: 3, y: 6 }, piece: FU }
+  - { type: move, side: white, from: { x: 2, y: 2 }, to: { x: 3, y: 1 }, piece: KA }
+  - { type: move, side: black, from: { x: 4, y: 8 }, to: { x: 3, y: 7 }, piece: GI }
+  - { type: move, side: white, from: { x: 4, y: 3 }, to: { x: 4, y: 4 }, piece: FU }
+  - { type: move, side: black, from: { x: 5, y: 9 }, to: { x: 6, y: 8 }, piece: OU }
+  - { type: move, side: white, from: { x: 7, y: 4 }, to: { x: 7, y: 5 }, piece: FU }
+  - { type: move, side: black, from: { x: 7, y: 6 }, to: { x: 7, y: 5 }, piece: FU }
+  - { type: move, side: white, from: { x: 3, y: 1 }, to: { x: 7, y: 5 }, piece: KA }
+  - { type: move, side: black, from: { x: 4, y: 8 }, to: { x: 3, y: 8 }, piece: OU }
+  - { type: move, side: white, from: { x: 7, y: 5 }, to: { x: 6, y: 4 }, piece: KA }
+  - { type: move, side: black, from: { x: 2, y: 6 }, to: { x: 2, y: 5 }, piece: FU }
+  - { type: move, side: white, from: { x: 5, y: 2 }, to: { x: 4, y: 3 }, piece: KI }
+  - { type: move, side: black, from: { x: 6, y: 6 }, to: { x: 6, y: 5 }, piece: FU }
+  - { type: move, side: white, from: { x: 6, y: 4 }, to: { x: 4, y: 2 }, piece: KA }
+  - { type: move, side: black, from: { x: 7, y: 9 }, to: { x: 4, y: 6 }, piece: KA }
+  - { type: move, side: white, from: { x: 8, y: 2 }, to: { x: 9, y: 2 }, piece: HI }
+  - { type: move, side: black, from: { x: 3, y: 7 }, to: { x: 4, y: 8 }, piece: GI }
+  - { type: move, side: white, from: { x: 4, y: 1 }, to: { x: 3, y: 1 }, piece: OU }
+  - { type: move, side: black, from: { x: 4, y: 8 }, to: { x: 5, y: 7 }, piece: GI }
+  - { type: move, side: white, from: { x: 6, y: 2 }, to: { x: 7, y: 3 }, piece: GI }
+  - { type: move, side: black, from: { x: 5, y: 7 }, to: { x: 6, y: 6 }, piece: GI }
+  - { type: move, side: white, from: { x: 3, y: 1 }, to: { x: 2, y: 2 }, piece: OU }
+  - { type: move, side: black, from: { x: 7, y: 8 }, to: { x: 8, y: 8 }, piece: OU }
+  - { type: move, side: white, from: { x: 9, y: 3 }, to: { x: 9, y: 4 }, piece: FU }
+  - { type: move, side: black, from: { x: 6, y: 9 }, to: { x: 7, y: 8 }, piece: KI }
+  - { type: move, side: white, from: { x: 9, y: 4 }, to: { x: 9, y: 5 }, piece: FU }
+  - { type: move, side: black, from: { x: 7, y: 7 }, to: { x: 7, y: 6 }, piece: GI }
+  - { type: move, side: white, to: { x: 7, y: 4 }, piece: FU }
+  - { type: move, side: black, from: { x: 6, y: 7 }, to: { x: 7, y: 7 }, piece: KI }
+  - { type: move, side: white, from: { x: 9, y: 2 }, to: { x: 7, y: 2 }, piece: HI }
+  - { type: move, side: black, from: { x: 8, y: 7 }, to: { x: 8, y: 6 }, piece: FU }
+  - { type: move, side: white, from: { x: 9, y: 1 }, to: { x: 9, y: 2 }, piece: KY }
+  - { type: move, side: black, from: { x: 9, y: 9 }, to: { x: 9, y: 8 }, piece: KY }
+  - { type: move, side: white, from: { x: 8, y: 1 }, to: { x: 9, y: 3 }, piece: KE }
+  - { type: move, side: black, from: { x: 9, y: 7 }, to: { x: 9, y: 6 }, piece: FU }
+  - { type: move, side: white, from: { x: 9, y: 5 }, to: { x: 9, y: 6 }, piece: FU }
+  - { type: move, side: black, from: { x: 9, y: 8 }, to: { x: 9, y: 6 }, piece: KY }
+  - { type: move, side: white, from: { x: 9, y: 3 }, to: { x: 8, y: 5 }, piece: KE }
+  - { type: move, side: black, to: { x: 9, y: 3 }, piece: FU }
+  - { type: move, side: white, from: { x: 8, y: 5 }, to: { x: 7, y: 7 }, piece: NK }
+  - { type: move, side: black, from: { x: 6, y: 6 }, to: { x: 7, y: 7 }, piece: GI }
+  - { type: move, side: white, to: { x: 6, y: 5 }, piece: KI }
+  - { type: move, side: black, from: { x: 4, y: 6 }, to: { x: 3, y: 7 }, piece: KA }
+  - { type: move, side: white, from: { x: 7, y: 4 }, to: { x: 7, y: 5 }, piece: FU }
+  - { type: move, side: black, from: { x: 7, y: 6 }, to: { x: 8, y: 7 }, piece: GI }
+  - { type: move, side: white, from: { x: 4, y: 5 }, to: { x: 3, y: 6 }, piece: KI }
+  - { type: move, side: black, from: { x: 9, y: 3 }, to: { x: 9, y: 2 }, piece: TO }
+  - { type: move, side: white, from: { x: 3, y: 6 }, to: { x: 3, y: 7 }, piece: KI }
+  - { type: move, side: black, from: { x: 2, y: 9 }, to: { x: 3, y: 7 }, piece: KE }
+  - { type: move, side: white, to: { x: 3, y: 9 }, piece: KA }
+  - { type: move, side: black, from: { x: 2, y: 8 }, to: { x: 2, y: 9 }, piece: HI }
+  - { type: move, side: white, from: { x: 3, y: 9 }, to: { x: 4, y: 8 }, piece: UM }
+  - { type: move, side: black, to: { x: 8, y: 3 }, piece: KI }
+  - { type: move, side: white, from: { x: 7, y: 2 }, to: { x: 7, y: 1 }, piece: HI }
+  - { type: move, side: black, from: { x: 9, y: 2 }, to: { x: 8, y: 2 }, piece: TO }
+  - { type: move, side: white, from: { x: 7, y: 1 }, to: { x: 3, y: 1 }, piece: HI }
+  - { type: move, side: black, from: { x: 8, y: 3 }, to: { x: 7, y: 3 }, piece: KI }
+  - { type: move, side: white, from: { x: 4, y: 8 }, to: { x: 3, y: 7 }, piece: UM }
+  - { type: move, side: black, from: { x: 7, y: 3 }, to: { x: 6, y: 2 }, piece: KI }
+  - { type: move, side: white, from: { x: 3, y: 7 }, to: { x: 4, y: 7 }, piece: UM }
+  - { type: move, side: black, from: { x: 2, y: 9 }, to: { x: 7, y: 9 }, piece: HI }
+  - { type: move, side: white, from: { x: 8, y: 4 }, to: { x: 8, y: 5 }, piece: FU }
+  - { type: move, side: black, from: { x: 8, y: 8 }, to: { x: 9, y: 7 }, piece: OU }
+  - { type: move, side: white, to: { x: 9, y: 5 }, piece: FU }
+  - { type: move, side: black, from: { x: 9, y: 6 }, to: { x: 9, y: 5 }, piece: KY }
+  - { type: move, side: white, to: { x: 8, y: 4 }, piece: KE }
+  - { type: move, side: black, from: { x: 8, y: 2 }, to: { x: 8, y: 3 }, piece: TO }
+  - { type: move, side: white, to: { x: 9, y: 6 }, piece: FU }
+  - { type: move, side: black, from: { x: 8, y: 7 }, to: { x: 9, y: 6 }, piece: GI }
+  - { type: move, side: white, from: { x: 7, y: 5 }, to: { x: 7, y: 6 }, piece: FU }
+  - { type: move, side: black, from: { x: 7, y: 7 }, to: { x: 8, y: 8 }, piece: GI }
+  - { type: move, side: white, from: { x: 4, y: 2 }, to: { x: 8, y: 6 }, piece: KA }
+  - { type: move, side: black, from: { x: 9, y: 7 }, to: { x: 8, y: 7 }, piece: OU }
+  - { type: move, side: white, from: { x: 4, y: 7 }, to: { x: 5, y: 7 }, piece: UM }
+  - { type: move, side: black, from: { x: 9, y: 6 }, to: { x: 8, y: 5 }, piece: GI }
+  - { type: move, side: white, from: { x: 8, y: 6 }, to: { x: 5, y: 3 }, piece: KA }
+  - { type: move, side: black, from: { x: 8, y: 3 }, to: { x: 8, y: 4 }, piece: TO }
+  - { type: move, side: white, from: { x: 5, y: 3 }, to: { x: 6, y: 2 }, piece: KA }
+  - { type: move, side: black, to: { x: 8, y: 6 }, piece: KY }
+  - { type: move, side: white, to: { x: 8, y: 3 }, piece: FU }
+  - { type: move, side: black, from: { x: 8, y: 4 }, to: { x: 8, y: 3 }, piece: TO }
+  - { type: move, side: white, from: { x: 6, y: 2 }, to: { x: 9, y: 5 }, piece: KA }
+  - { type: move, side: black, to: { x: 8, y: 4 }, piece: GI }
+  - { type: move, side: white, from: { x: 9, y: 5 }, to: { x: 8, y: 4 }, piece: KA }
+  - { type: move, side: black, from: { x: 8, y: 5 }, to: { x: 8, y: 4 }, piece: GI }
+  - { type: move, side: white, to: { x: 8, y: 5 }, piece: FU }
+  - { type: move, side: black, from: { x: 8, y: 7 }, to: { x: 9, y: 6 }, piece: OU }
+  - { type: move, side: white, from: { x: 8, y: 5 }, to: { x: 8, y: 6 }, piece: FU }
+  - { type: move, side: black, from: { x: 9, y: 6 }, to: { x: 9, y: 5 }, piece: OU }
+  - { type: move, side: white, to: { x: 8, y: 7 }, piece: KY }
+  - { type: move, side: black, from: { x: 7, y: 9 }, to: { x: 5, y: 9 }, piece: HI }
+  - { type: move, side: white, from: { x: 5, y: 7 }, to: { x: 4, y: 8 }, piece: UM }
+  - { type: move, side: black, from: { x: 5, y: 9 }, to: { x: 2, y: 9 }, piece: HI }
+  - { type: move, side: white, from: { x: 8, y: 7 }, to: { x: 8, y: 8 }, piece: KY }
+  - { type: move, side: black, from: { x: 7, y: 8 }, to: { x: 8, y: 8 }, piece: KI }
+  - { type: move, side: white, to: { x: 8, y: 7 }, piece: KY }
+  - { type: move, side: black, to: { x: 7, y: 3 }, piece: FU }
+  - { type: move, side: white, from: { x: 8, y: 7 }, to: { x: 8, y: 8 }, piece: NK }
+  - { type: move, side: black, from: { x: 7, y: 3 }, to: { x: 7, y: 2 }, piece: TO }
+  - { type: move, side: white, from: { x: 8, y: 6 }, to: { x: 8, y: 7 }, piece: TO }
+  - { type: move, side: black, from: { x: 8, y: 5 }, to: { x: 7, y: 5 }, piece: OU }
+  - { type: move, side: white, from: { x: 8, y: 7 }, to: { x: 8, y: 6 }, piece: TO }
+  - { type: move, side: black, to: { x: 7, y: 5 }, piece: FU }
+  - { type: move, side: white, from: { x: 4, y: 8 }, to: { x: 3, y: 8 }, piece: UM }
+  - { type: move, side: black, from: { x: 2, y: 9 }, to: { x: 6, y: 9 }, piece: HI }
+  - { type: move, side: white, from: { x: 2, y: 8 }, to: { x: 3, y: 8 }, piece: NK }
+  - { type: move, side: black, from: { x: 6, y: 9 }, to: { x: 6, y: 6 }, piece: HI }
+  - { type: move, side: white, from: { x: 3, y: 8 }, to: { x: 4, y: 8 }, piece: UM }
+  - { type: move, side: black, from: { x: 6, y: 6 }, to: { x: 6, y: 7 }, piece: HI }
+  - { type: move, side: white, from: { x: 7, y: 6 }, to: { x: 7, y: 7 }, piece: TO }
+  - { type: move, side: black, from: { x: 6, y: 7 }, to: { x: 2, y: 7 }, piece: HI }
+  - { type: move, side: white, from: { x: 7, y: 7 }, to: { x: 7, y: 6 }, piece: TO }
+  - { type: move, side: black, from: { x: 7, y: 4 }, to: { x: 7, y: 3 }, piece: OU }
+  - { type: move, side: white, from: { x: 7, y: 6 }, to: { x: 7, y: 5 }, piece: TO }
+  - { type: move, side: black, to: { x: 7, y: 1 }, piece: KA }
+  - { type: move, side: white, to: { x: 9, y: 1 }, piece: GI }
+  - { type: resign, side: black }

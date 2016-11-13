@@ -1,4 +1,8 @@
+.DS_Store
+
 /dist/
+/tmp/
+/.tmp/
 !.gitkeep
 
 /node_modules/

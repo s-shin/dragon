@@ -10,7 +10,8 @@ async function createWindow() {
     win.loadURL(`file://${__dirname}/index.html`);
   }
   if (process.env.NODE_ENV === 'development') {
-    require('electron-load-devtool'); // eslint-disable-line
+    const loadDevtool = require('electron-load-devtool'); // eslint-disable-line
+    loadDevtool(loadDevtool.VUEJS_DEVTOOLS);
     win.webContents.openDevTools();
   }
   win.on('closed', () => {

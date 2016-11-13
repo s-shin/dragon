@@ -1,0 +1,204 @@
+---
+$schema: 'http://json-schema.org/draft-04/schema#'
+id: http://s-shin.github.com/dragon/schema.json
+definitions:
+  record:
+    title: 棋譜
+    type: object
+    properties:
+      meta:
+        title: メタ情報
+        type: object
+        properties:
+          title: { type: string }
+          startedAt: { type: string, format: date-time }
+          finishedAt: { type: string, format: date-time }
+          players: { $ref: '#/definitions/playerPair' }
+      setup:
+        title: 初期配置
+        $ref: '#/definitions/state'
+        default: { preset: default }
+      events:
+        title: 事象リスト
+        type: array
+        items: { $ref: '#/definitions/event' }
+  playerPair:
+    type: object
+    properties:
+      black: { $ref: '#/definitions/player' }
+      white: { $ref: '#/definitions/player' }
+    additionalProperties: false
+  player:
+    type: object
+    properties:
+      name:
+        type: object
+        properties:
+          first:
+            type: string
+          last:
+            type: string
+      rank:
+        type: object
+        properties:
+          unit:
+            type: string
+            enum: [kyu, dan]
+          value:
+            type: integer
+            minimum: 1
+          isAmateur:
+            type: boolean
+        required: [unit, value]
+        additionalProperties: false
+      titles:
+        type: array
+        items:
+          type: string
+          enum: [meijin, ryu-ou, kisei, oi, oza, kioh, osho]
+  position:
+    type: object
+    properties:
+      x: { type: integer, minimum: 1, maximum: 9 }
+      y: { type: integer, minimum: 1, maximum: 9 }
+    required: [x, y]
+    additionalProperties: false
+  piece:
+    type: string
+    enum: [FU, KY, KE, GI, KI, KA, HI, OU, TO, NY, NK, NG, UM, RY]
+  side:
+    type: string
+    enum: [black, white]
+  pieceOnBoard:
+    title: 盤上の駒情報
+    type: object
+    properties:
+      side: { $ref: '#/definitions/side' }
+      position: { $ref: '#/definitions/position' }
+      piece: { $ref: '#/definitions/piece' }
+  hand:
+    type: object
+    properties:
+      FU: { type: integer, minimum: 0, default: 0 }
+      KY: { type: integer, minimum: 0, default: 0 }
+      KE: { type: integer, minimum: 0, default: 0 }
+      GI: { type: integer, minimum: 0, default: 0 }
+      KI: { type: integer, minimum: 0, default: 0 }
+      KA: { type: integer, minimum: 0, default: 0 }
+      HI: { type: integer, minimum: 0, default: 0 }
+      OU: { type: integer, minimum: 0, default: 0 }
+    additionalProperties: false
+  board:
+    type: array
+    items: { $ref: '#/definitions/pieceOnBoard' }
+  statePreset:
+    type: string
+    enum:
+      - empty
+      - default
+      - handicap-KY
+      - handicap-KA
+      - handicap-HI
+      - handicap-2
+      - handicap-3
+      - handicap-4
+      - handicap-6
+      - handicap-8
+      - handicap-10
+    default: default
+  #--------------------------------------
+  # States
+  state:
+    title: 局面
+    oneOf:
+      - { $ref: '#/definitions/presetState' }
+      - { $ref: '#/definitions/boardState' }
+  presetState:
+    title: プリセットの局面
+    type: object
+    properties:
+      preset: { $ref: '#/definitions/statePreset', default: default }
+    required: [preset]
+    additionalProperties: false
+  boardState:
+    title: 駒情報を持つ局面
+    type: object
+    properties:
+      hands:
+        type: object
+        properties:
+          black: { $ref: '#/definitions/piece' }
+          white: { $ref: '#/definitions/piece' }
+        required: [black, white]
+        additionalProperties: false
+      board: { $ref: '#/definitions/board' }
+    required: [hands, board]
+    additionalProperties: false
+  #--------------------------------------
+  # Events
+  event:
+    oneOf:
+      - $ref: '#/definitions/moveEvent'
+      - $ref: '#/definitions/resignEvent'
+      - $ref: '#/definitions/repetitionEvent'
+      - $ref: '#/definitions/impasseEvent'
+      - $ref: '#/definitions/suspendEvent'
+      - $ref: '#/definitions/resumeEvent'
+  moveEvent:
+    title: 駒移動 (駒打ち含む)
+    type: object
+    properties:
+      type: { type: string, enum: [move], default: move }
+      side: { $ref: '#/definitions/side' }
+      from:
+        oneOf:
+          - $ref: '#/definitions/position'
+          - type: 'null' # drop
+      to: { $ref: '#/definitions/position' }
+      piece: { $ref: '#/definitions/piece' }
+      date: { type: string, format: date-time }
+    required: [type, side, to, piece] # typeは意図的に除外
+    additionalProperties: false
+  resignEvent:
+    title: 投了
+    type: object
+    properties:
+      type: { type: string, enum: [resign], default: resign }
+      side: { $ref: '#/definitions/side' }
+      reason: { type: string }
+      date: { type: string, format: date-time }
+    required: [type]
+    additionalProperties: false
+  repetitionEvent:
+    title: 千日手
+    type: object
+    properties:
+      type: { type: string, enum: [repetition], default: repetition }
+      date: { type: string, format: date-time }
+    required: [type]
+    additionalProperties: false
+  impasseEvent:
+    title: 持将棋
+    type: object
+    properties:
+      type: { type: string, enum: [impasse], default: impasse }
+      date: { type: string, format: date-time }
+    required: [type]
+    additionalProperties: false
+  suspendEvent:
+    title: 中断
+    type: object
+    properties:
+      type: { type: string, enum: [suspend], default: suspend }
+      reason: { type: string }
+      date: { type: string, format: date-time }
+    required: [type]
+    additionalProperties: false
+  resumeEvent:
+    title: 再開
+    type: object
+    properties:
+      type: { type: string, enum: [resume], default: resume }
+      date: { type: string, format: date-time }
+    required: [type]
+    additionalProperties: false

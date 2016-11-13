@@ -28,17 +28,28 @@ const config = {
       {
         test: /\.js$/,
         loader: 'babel',
-        exclude: /node_modules/,
+        exclude: [
+          path.resolve(__dirname, 'node_modules'),
+        ],
       },
       {
         test: /\.scss$/,
         loader: isHot
-          ? 'style!css!sass'
-          : ExtractTextPlugin.extract({ loader: 'sass-loader' }),
+          ? 'style!css!postcss!sass'
+          : ExtractTextPlugin.extract({ loader: ['postcss-loader', 'sass-loader'] }),
+      },
+      {
+        test: /\.json$/,
+        loader: 'json',
+      },
+      {
+        test: /\.yml$/,
+        loader: 'json!yaml',
       },
     ],
   },
   plugins: [
+    new webpack.IgnorePlugin(/regenerator|nodent|js\-beautify/, /ajv/),
     ...(isHot ? [] : [
       new ExtractTextPlugin('./dist/style.css'),
     ]),

@@ -1,0 +1,24 @@
+.c-shogi-record {
+  width: 9.25em;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    .is-active {
+      background-color: $color-background-invert;
+      color: $color-background;
+      border-bottom-color: $color-background;
+    }
+    &__item {
+      padding: 0.2em 0.6em;
+      border-bottom: 1px solid $color-border-light;
+      &:last-child { border-bottom-width: 0; }
+      &__index {
+        display: inline-block;
+        width: 1.6em;
+        margin-right: 0.4em;
+        text-align: right;
+      }
+    }
+  }
+}

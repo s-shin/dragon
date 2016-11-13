@@ -1,3 +1,158 @@
-body {
-  background-color: #EEE;
+//------------------------------------------------------------------------------
+// Foundation
+//------------------------------------------------------------------------------
+@import "~sanitize.css/sanitize.css";
+
+@mixin icon-base {
+  display: inline-block;
+  font: normal normal normal 14px/1 app;
+  font-size: inherit;
+  text-rendering: auto;
+  writing-mode: initial;
 }
+.icon {
+  @include icon-base();
+  line-height: 0.75em;
+  vertical-align: -10%;
+  @each $name, $code in (
+    black: "\41", white: "\42"
+  ) {
+    &--#{$name}:before { content: $code; }
+  }
+}
+.icon-v { @include icon-base(); }
+
+// Global Variables
+$color-background: #FFF;
+$color-background-invert: #333;
+$color-primary: #000;
+$color-accent: #FAA;
+$color-border: #333;
+$color-border-light: #CCC;
+
+//------------------------------------------------------------------------------
+// Layout
+//------------------------------------------------------------------------------
+html, body { height: 100%; }
+body {
+  background-color: #FFF;
+  font-family: "YuMincho", serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#header {}
+
+#content {
+  display: flex;
+  height: 100%;
+  overflow: auto;
+}
+
+#footer {}
+
+//------------------------------------------------------------------------------
+// Components
+//------------------------------------------------------------------------------
+@import "components/_shogi-state";
+@import "components/_shogi-record";
+
+.c-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-left: 1px solid $color-border;
+  .c-panel__title {
+    margin: 0;
+    height: 2.3em;
+    line-height: 2.3em;
+    font-size: 1em;
+    text-align: center;
+    border-bottom: 1px solid $color-border;
+  }
+  .c-panel__content {
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+//------------------------------------------------------------------------------
+// Projects
+//------------------------------------------------------------------------------
+.p-header {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 3px;
+  border-bottom: 1px solid $color-border;
+  &:after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: -4px;
+    content: "";
+    border-bottom: 1px solid $color-border;
+  }
+  &__nav {
+    position: relative;
+    &__logo {
+      display: inline-block;
+      width: 3rem;
+      height: 100%;
+      line-height: 3rem;
+      text-align: center;
+      font-size: 1.75rem;
+      color: #FFF;
+      background-color: #666;
+      user-select: none;
+    }
+    &__menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 400px;
+      margin: 0;
+      z-index: 1;
+      background-color: $color-background;
+      border: 1px solid $color-border;
+    }
+    &.is-active &__logo {
+      background-color: $color-background-invert;
+    }
+    &.is-active &__menu {
+      display: block;
+    }
+  }
+  &__title {
+    height: 100%;
+    margin: 0 0.8em;
+    font-size: 1.1rem;
+    line-height: 3rem;
+  }
+}
+
+.p-board-view {
+  display: block;
+  width: 100%;
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 5.5vmin;
+  }
+}
+
+.p-record-view {
+}
+
+//------------------------------------------------------------------------------
+// Utilities
+//------------------------------------------------------------------------------
+@import "utils/_flex";

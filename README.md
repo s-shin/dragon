@@ -1,17 +1,8 @@
 # dragon
 
-## Technology Stacks
+```
+npm test
 
-* Electron
-* Webpack
-* Babel
-* Sass
-* Vue, Vuex
-* ESLint
-
-## Development
-
-```sh
 npm run dev-server
-npm run dev
+npm run dev # in another console
 ```

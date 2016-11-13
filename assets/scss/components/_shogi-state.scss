@@ -1,0 +1,63 @@
+$shogi-board-outline: 2px solid #000;
+$shogi-borad-grid-border: 1px solid #000;
+
+.c-shogi-state {
+  user-select: none;
+
+  &__hand {
+    margin: 0 0.4em;
+    font-size: 0.7em;
+    writing-mode: vertical-rl;
+    &.is-white {
+      transform: rotate(180deg);
+    }
+    &__side-mark {
+      width: 1em;
+    }
+    &__player-name {
+      display: inline-block;
+      margin-bottom: 1em;
+    }
+  }
+
+  &__board {
+    table {
+      border-collapse: collapse;
+      border: $shogi-board-outline;
+      td {
+        position: relative;
+        border: $shogi-borad-grid-border;
+      }
+      tr:nth-child(3) td:nth-child(3),
+      tr:nth-child(3) td:nth-child(6),
+      tr:nth-child(6) td:nth-child(3),
+      tr:nth-child(6) td:nth-child(6) {
+        &:after {
+          $size: 0.129em;
+          display: block;
+          width: $size;
+          height: $size;
+          border-radius: $size * 10;
+          position: absolute;
+          right: -$size * 2 / 3;
+          bottom: -$size * 2 / 3;
+          content: "";
+          background-color: #000;
+        }
+      }
+    }
+    &__cell {
+      width: 1em;
+      height: 1em;
+      line-height: 1em;
+      margin: 0.175em 0.1em;
+    }
+    &__piece {
+      display: block;
+      padding-top: 0.075em; // for rendering of Japanese text
+      &.is-white {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
